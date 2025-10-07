@@ -27,7 +27,7 @@ def handle_job_posting_request():
         # --- NEUE METHODE FÜR DEN API-AUFRUF ---
 
         # 1. Die URL für die Gemini REST API zusammenbauen
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.0-pro:generateContent?key={api_key}"
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key={api_key}"
 
         # 2. Den System-Prompt und die User-Daten definieren
         system_prompt = """
