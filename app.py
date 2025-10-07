@@ -27,7 +27,7 @@ def handle_job_posting_request():
         # --- NEUE METHODE FÜR DEN API-AUFRUF ---
 
         # 1. Die URL für die Gemini REST API zusammenbauen
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-latest:generateContent?key={api_key}"
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key={api_key}"
 
         # 2. Den System-Prompt und die User-Daten definieren
         system_prompt = """
@@ -82,4 +82,5 @@ def handle_job_posting_request():
         return jsonify({"error": "An internal server error occurred."}), 500
 
 if __name__ == '__main__':
+
     app.run(debug=True, port=5000)
