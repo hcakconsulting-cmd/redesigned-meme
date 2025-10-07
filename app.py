@@ -82,5 +82,4 @@ def handle_job_posting_request():
         return jsonify({"error": "An internal server error occurred."}), 500
 
 if __name__ == '__main__':
-
     app.run(debug=True, port=5000)
