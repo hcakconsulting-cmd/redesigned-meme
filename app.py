@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/api/*": {"origins": "https://457a7b04-6a7b-4126-8aef-96f516543fb3.dev35.app-preview.com"}})
 
 @app.route('/api/generate-posting', methods=['POST'])
 def handle_job_posting_request():
